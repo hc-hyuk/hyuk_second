@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Web Page!</title>
+</head>
+<body>
+<center>
+<div class="container">
+<div> 이름: <input type="text" id="name" /></div>
+<div> 지역:
+       <select id="city" onchange="changeCity();">
+            <option value="02"> 서울 </option>
+             <option value="064"> 제주 </option>
+       </select>
+</div>
+<div> 동네:
+ <select id="region_02">
+            <option value=""> 강남 </option>
+             <option value=""> 서초 </option>
+       </select>
+ <select id="region_064" style="display:none;">
+            <option value=""> 제주시 </option>
+             <option value=""> 서귀포시 </option>
+       </select>
+<div>
+<button type="button" onclick="regist();">등록</button>
+</div>
+<script>
+function regist(){
+alert(document.getElementById("name").value);
+alert(document.getElementById("city").value);
+}
+function changeCity(){
+let city=document.getElementById("city").value;
+document.getElementById("region_02").style.display="none";
+document.getElementById("region_064").style.display="none";
+document.getElementById("region_"+city).style.display="";
+}
+</script>
+  <h1>포산중 1학년 10반</h1>
+  <p style="font-size:20px; border:3px solid red">나의 첫번째 웹페이지</p>
+  <a href="https://www.daegu.go.kr">
+<img src="file:///C:/Users/User/Desktop/그림1.png" alt="누르세요">
+</a>
+</center>
+</body>
+</html>
